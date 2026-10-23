@@ -36,4 +36,5 @@
 <g class="fade" style="animation-delay:0.70s"><circle cx="30" cy="147" r="5" fill="#818cf8"/><text x="42" y="151" class="lang">CSS 0.63%</text></g>
 <g class="fade" style="animation-delay:0.80s"><circle cx="200" cy="147" r="5" fill="#ddd6fe"/><text x="212" y="151" class="lang">Ruby 0.42%</text></g>
 </g>
+
 </svg>

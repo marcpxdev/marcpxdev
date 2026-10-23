@@ -30,4 +30,5 @@
 <text x="34" y="72" class="ln" text-anchor="end">1</text><text x="52" y="72" class="code" xml:space="preserve"><tspan fill="#f472b6">while</tspan><tspan fill="#a1a1b5"> (</tspan><tspan fill="#ffffff">alive</tspan><tspan fill="#a1a1b5">) {</tspan></text><text x="34" y="98" class="ln" text-anchor="end">2</text><text x="52" y="98" class="code" xml:space="preserve"><tspan fill="#a1a1b5">  </tspan><tspan fill="#c084fc">code</tspan><tspan fill="#a1a1b5">();</tspan></text><text x="34" y="124" class="ln" text-anchor="end">3</text><text x="52" y="124" class="code" xml:space="preserve"><tspan fill="#a1a1b5">  </tspan><tspan fill="#c084fc">learn</tspan><tspan fill="#a1a1b5">();</tspan></text><text x="34" y="150" class="ln" text-anchor="end">4</text><text x="52" y="150" class="code" xml:space="preserve"><tspan fill="#a1a1b5">  </tspan><tspan fill="#c084fc">repeat</tspan><tspan fill="#a1a1b5">();</tspan></text><text x="34" y="176" class="ln" text-anchor="end">5</text><text x="52" y="176" class="code" xml:space="preserve"><tspan fill="#a1a1b5">}</tspan></text>
 <rect x="66" y="161" width="9" height="19" class="caret"/>
 </g>
+
 </svg>

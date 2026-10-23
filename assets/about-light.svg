@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150" role="img" aria-label="About me">
+<title>About me</title>
+<style>
+  text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+  .title { fill: #7c3aed; font-size: 18px; font-weight: 600; }
+  .rain { fill: #ede9fe; opacity: 0.6; font-size: 13px; animation: fall linear infinite; }
+  @keyframes fall { to { transform: translateY(550px); } }
+  .fade { opacity: 0; animation: fadein 0.4s ease-out forwards; }
+  @keyframes fadein { to { opacity: 1; } }
+  .label { fill: #59636e; font-size: 14px; font-weight: 600; }
+  .val { fill: #1f2328; font-size: 14px; font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) {
+    .rain { display: none; }
+    * { animation: none !important; opacity: 1 !important; }
+  }
+</style>
+<clipPath id="card-440x150"><rect width="440" height="150" rx="4.5"/></clipPath>
+<g clip-path="url(#card-440x150)">
+<rect width="440" height="150" fill="#ffffff"/>
+
+<text x="25" y="35" class="title">About Me</text>
+<g class="fade" style="animation-delay:0.15s"><g transform="translate(25,58)" fill="none" stroke="#7c3aed" color="#7c3aed" stroke-width="1.4" stroke-linecap="round"><path d="M8 14.5V8"/><path d="M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8Z"/><path d="M8 7c0-2.5 1.8-4 5-4 0 2.8-1.8 4-5 4Z"/></g><text x="50" y="70" class="label">Currently learning:</text><text x="200" y="70" class="val">MERN Stack</text></g>
+<g class="fade" style="animation-delay:0.27s"><g transform="translate(25,86)" fill="none" stroke="#7c3aed" color="#7c3aed" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 3h11v8H7.5L5 13.5V11h-2.5z" stroke-linejoin="round"/></g><text x="50" y="98" class="label">Ask me about:</text><text x="200" y="98" class="val">Nothing 😆</text></g>
+<g class="fade" style="animation-delay:0.39s"><g transform="translate(25,114)" fill="none" stroke="#7c3aed" color="#7c3aed" stroke-width="1.4" stroke-linecap="round"><path d="M9 1.5 3.5 9h4l-1 5.5 5.5-7.5h-4z" stroke-linejoin="round"/></g><text x="50" y="126" class="label">Fun fact:</text><text x="200" y="126" class="val">Freelancing</text></g>
+</g>
+<rect x="0.5" y="0.5" width="439" height="149" rx="4.5" fill="none" stroke="#d0d7de"/>
+</svg>

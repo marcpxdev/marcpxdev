@@ -23,4 +23,5 @@
 <g class="fade" style="animation-delay:0.27s"><g transform="translate(25,86)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 3h11v8H7.5L5 13.5V11h-2.5z" stroke-linejoin="round"/></g><text x="50" y="98" class="label">Ask me about:</text><text x="200" y="98" class="val">Nothing 😆</text></g>
 <g class="fade" style="animation-delay:0.39s"><g transform="translate(25,114)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M9 1.5 3.5 9h4l-1 5.5 5.5-7.5h-4z" stroke-linejoin="round"/></g><text x="50" y="126" class="label">Fun fact:</text><text x="200" y="126" class="val">Freelancing</text></g>
 </g>
+
 </svg>
