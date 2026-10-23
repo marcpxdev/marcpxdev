@@ -16,8 +16,8 @@ jobs:
       - name: Generate SVGs
         run: python3 scripts/generate_stats.py
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-          GH_USER: userMarcPaul
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+          GH_USER: marcpxdev
           THEME: purple   # or "cyan" / "matrix"
 
       - name: Commit updated SVGs

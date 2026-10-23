@@ -20,7 +20,7 @@ import json, os, sys, random, urllib.request
 from datetime import date, timedelta
 from xml.sax.saxutils import escape
 
-USER = os.environ.get("GH_USER", "userMarcPaul")
+USER = os.environ.get("GH_USER", "marcpxdev")
 TOKEN = os.environ.get("GH_TOKEN", "")
 OUT = "assets"
 
