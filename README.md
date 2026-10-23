@@ -10,7 +10,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/about.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="assets/about-light.svg"/>
-    <img src="assets/about.svg" alt="Currently learning MERN Stack. Ask me about nothing. Fun fact: Freelancing." width="440"/>
+    <img src="assets/about.svg" alt="Currently learning MERN Stack. Ask me about nothing. Fun fact: Freelancing." width="100%"/>
   </picture>
 </p>
 

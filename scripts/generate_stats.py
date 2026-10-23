@@ -249,7 +249,7 @@ def rain(width, height, cols, seed):
     return "\n".join(out)
 
 
-def frame(W, H, title, body, extra_css=""):
+def frame(W, H, title, body, extra_css="", border=True):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(title)}">
 <title>{escape(title)}</title>
 <style>
@@ -271,7 +271,7 @@ def frame(W, H, title, body, extra_css=""):
 {rain(W, H, max(8, W // 28), W + H)}
 {body}
 </g>
-{f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="4.5" fill="none" stroke="{T["border"]}"/>' if T["border"] else ""}
+{f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="4.5" fill="none" stroke="{T["border"]}"/>' if T["border"] and border else ""}
 </svg>'''
 
 # ---------------------------------------------------------------- icons (16x16, stroked)
@@ -466,9 +466,9 @@ def activity_svg(d):
 NAME = "marcpxdev"
 TAGLINES = ["Just a developer", "Learning the MERN stack", "Building apps with Flutter"]
 ABOUT = [
-    ("sprout", "Currently learning:", "MERN Stack"),
-    ("chat", "Ask me about:", "Nothing 😆"),
-    ("bolt", "Fun fact:", "Freelancing"),
+    ("sprout", "Currently learning", "MERN Stack"),
+    ("chat", "Ask me about", "Nothing 😆"),
+    ("bolt", "Fun fact", "Freelancing"),
 ]
 
 DEVICON = "https://raw.githubusercontent.com/devicons/devicon/master/icons"
@@ -588,7 +588,7 @@ def hero_svg():
 <text x="{W / 2}" y="62" class="hi" text-anchor="middle">Hi, I'm</text>
 <text x="{W / 2}" y="118" class="name" text-anchor="middle" fill="url(#namefill)">{escape(NAME)}</text>
 {"".join(lines)}'''
-    return frame(W, H, f"Hi, I'm {NAME}", body, css)
+    return frame(W, H, f"Hi, I'm {NAME}", body, css, border=False)
 
 
 TECH_ROWS = [["Languages"], ["Frontend", "Backend"], ["Mobile", "Databases"]]
@@ -636,7 +636,7 @@ def tech_svg(offline=False):
   .tname {{ fill: {T["subtle"]}; font-size: 11.5px; }}
   .init {{ fill: {T["title"]}; font-size: 16px; font-weight: 700; }}
   .sep {{ stroke: {T["grid"]}; stroke-width: 1; }}'''
-    svg = frame(W, H, "Tech stack", "\n".join(body), css)
+    svg = frame(W, H, "Tech stack", "\n".join(body), css, border=False)
     return svg.replace('xmlns="http://www.w3.org/2000/svg"',
                        'xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"', 1)
 
@@ -670,18 +670,26 @@ def motto_svg():
 
 
 def about_svg():
-    W, H = 440, 150
-    body = [f'<text x="25" y="35" class="title">About Me</text>']
+    W, H = 850, 120
+    pad, gap, th = 24, 18, 88
+    tw = (W - 2 * pad - gap * (len(ABOUT) - 1)) / len(ABOUT)
+    ty = (H - th) / 2
+    cy = ty + th / 2
+    body = []
     for i, (ic, label, val) in enumerate(ABOUT):
-        y = 70 + i * 28
+        tx = pad + i * (tw + gap)
         body.append(
             f'<g class="fade" style="animation-delay:{0.15 + i * 0.12:.2f}s">'
-            f'{icon(ic, 25, y - 12)}'
-            f'<text x="50" y="{y}" class="label">{escape(label)}</text>'
-            f'<text x="200" y="{y}" class="val">{escape(val)}</text></g>')
-    css = f'''.label {{ fill: {T["muted"]}; font-size: {T["label_size"]}px; font-weight: 600; }}
-  .val {{ fill: {T["text"]}; font-size: {T["label_size"]}px; font-weight: 700; }}'''
-    return frame(W, H, "About me", "\n".join(body), css)
+            f'<rect x="{tx:.1f}" y="{ty}" width="{tw:.1f}" height="{th}" rx="12" class="tile"/>'
+            f'<rect x="{tx + 20:.1f}" y="{cy - 24}" width="48" height="48" rx="12" class="badge"/>'
+            f'<g transform="translate({tx + 34:.1f},{cy - 10}) scale(1.25)">{icon(ic, 0, 0)}</g>'
+            f'<text x="{tx + 84:.1f}" y="{cy - 6}" class="label">{escape(label)}</text>'
+            f'<text x="{tx + 84:.1f}" y="{cy + 17}" class="val">{escape(val)}</text></g>')
+    css = f'''.tile {{ fill: {T["surface"]}; stroke: {T["grid"]}; stroke-width: 1; }}
+  .badge {{ fill: {T["grid"]}; }}
+  .label {{ fill: {T["muted"]}; font-size: 13px; }}
+  .val {{ fill: {T["text"]}; font-size: 17px; font-weight: 700; }}'''
+    return frame(W, H, "About me", "\n".join(body), css, border=False)
 
 
 def main():
