@@ -1,27 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150" role="img" aria-label="About me">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="120" viewBox="0 0 850 120" role="img" aria-label="About me">
 <title>About me</title>
 <style>
   text { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
   .title { fill: #c084fc; font-size: 18px; font-weight: 600; }
   .rain { fill: #2a2140; opacity: 0.6; font-size: 13px; animation: fall linear infinite; }
-  @keyframes fall { to { transform: translateY(550px); } }
+  @keyframes fall { to { transform: translateY(520px); } }
   .fade { opacity: 0; animation: fadein 0.4s ease-out forwards; }
   @keyframes fadein { to { opacity: 1; } }
-  .label { fill: #a1a1b5; font-size: 14px; font-weight: 600; }
-  .val { fill: #ffffff; font-size: 14px; font-weight: 700; }
+  .tile { fill: #161b22; stroke: #2a2140; stroke-width: 1; }
+  .badge { fill: #2a2140; }
+  .label { fill: #a1a1b5; font-size: 13px; }
+  .val { fill: #ffffff; font-size: 17px; font-weight: 700; }
   @media (prefers-reduced-motion: reduce) {
     .rain { display: none; }
     * { animation: none !important; opacity: 1 !important; }
   }
 </style>
-<clipPath id="card-440x150"><rect width="440" height="150" rx="4.5"/></clipPath>
-<g clip-path="url(#card-440x150)">
-<rect width="440" height="150" fill="#0d1117"/>
+<clipPath id="card-850x120"><rect width="850" height="120" rx="4.5"/></clipPath>
+<g clip-path="url(#card-850x120)">
+<rect width="850" height="120" fill="#0d1117"/>
 
-<text x="25" y="35" class="title">About Me</text>
-<g class="fade" style="animation-delay:0.15s"><g transform="translate(25,58)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M8 14.5V8"/><path d="M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8Z"/><path d="M8 7c0-2.5 1.8-4 5-4 0 2.8-1.8 4-5 4Z"/></g><text x="50" y="70" class="label">Currently learning:</text><text x="200" y="70" class="val">MERN Stack</text></g>
-<g class="fade" style="animation-delay:0.27s"><g transform="translate(25,86)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 3h11v8H7.5L5 13.5V11h-2.5z" stroke-linejoin="round"/></g><text x="50" y="98" class="label">Ask me about:</text><text x="200" y="98" class="val">Nothing 😆</text></g>
-<g class="fade" style="animation-delay:0.39s"><g transform="translate(25,114)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M9 1.5 3.5 9h4l-1 5.5 5.5-7.5h-4z" stroke-linejoin="round"/></g><text x="50" y="126" class="label">Fun fact:</text><text x="200" y="126" class="val">Freelancing</text></g>
+<g class="fade" style="animation-delay:0.15s"><rect x="24.0" y="16.0" width="255.3" height="88" rx="12" class="tile"/><rect x="44.0" y="36.0" width="48" height="48" rx="12" class="badge"/><g transform="translate(58.0,50.0) scale(1.25)"><g transform="translate(0,0)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M8 14.5V8"/><path d="M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8Z"/><path d="M8 7c0-2.5 1.8-4 5-4 0 2.8-1.8 4-5 4Z"/></g></g><text x="108.0" y="54.0" class="label">Currently learning</text><text x="108.0" y="77.0" class="val">MERN Stack</text></g>
+<g class="fade" style="animation-delay:0.27s"><rect x="297.3" y="16.0" width="255.3" height="88" rx="12" class="tile"/><rect x="317.3" y="36.0" width="48" height="48" rx="12" class="badge"/><g transform="translate(331.3,50.0) scale(1.25)"><g transform="translate(0,0)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 3h11v8H7.5L5 13.5V11h-2.5z" stroke-linejoin="round"/></g></g><text x="381.3" y="54.0" class="label">Ask me about</text><text x="381.3" y="77.0" class="val">Nothing 😆</text></g>
+<g class="fade" style="animation-delay:0.39s"><rect x="570.7" y="16.0" width="255.3" height="88" rx="12" class="tile"/><rect x="590.7" y="36.0" width="48" height="48" rx="12" class="badge"/><g transform="translate(604.7,50.0) scale(1.25)"><g transform="translate(0,0)" fill="none" stroke="#c084fc" color="#c084fc" stroke-width="1.4" stroke-linecap="round"><path d="M9 1.5 3.5 9h4l-1 5.5 5.5-7.5h-4z" stroke-linejoin="round"/></g></g><text x="654.7" y="54.0" class="label">Fun fact</text><text x="654.7" y="77.0" class="val">Freelancing</text></g>
 </g>
 
 </svg>
