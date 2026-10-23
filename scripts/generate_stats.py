@@ -272,6 +272,9 @@ ICONS = {
     "issues": '<circle cx="8" cy="8" r="6.3"/><circle cx="8" cy="8" r="1.1" fill="currentColor"/>',
     "repo": '<path d="M3 13V3a1.5 1.5 0 0 1 1.5-1.5H13v10H4.5A1.5 1.5 0 0 0 3 13a1.5 1.5 0 0 0 1.5 1.5H13"/>'
             '<path d="M6 11.5v3.5l1.25-.9 1.25.9v-3.5"/>',
+    "sprout": '<path d="M8 14.5V8"/><path d="M8 8C8 5 6 3.5 3 3.5 3 6.5 5 8 8 8Z"/><path d="M8 7c0-2.5 1.8-4 5-4 0 2.8-1.8 4-5 4Z"/>',
+    "chat": '<path d="M2.5 3h11v8H7.5L5 13.5V11h-2.5z" stroke-linejoin="round"/>',
+    "bolt": '<path d="M9 1.5 3.5 9h4l-1 5.5 5.5-7.5h-4z" stroke-linejoin="round"/>',
 }
 
 
@@ -435,10 +438,15 @@ def activity_svg(d):
 
 
 # ---------------------------------------------------------------- profile content
-# Edit these to change what the header, tech stack and motto show.
+# Edit these to change what the header, about, tech stack and motto show.
 
 NAME = "marcpxdev"
 TAGLINES = ["Just a developer", "Learning the MERN stack", "Building apps with Flutter"]
+ABOUT = [
+    ("sprout", "Currently learning:", "MERN Stack"),
+    ("chat", "Ask me about:", "Nothing 😆"),
+    ("bolt", "Fun fact:", "Freelancing"),
+]
 
 DEVICON = "https://raw.githubusercontent.com/devicons/devicon/master/icons"
 # (name shown, devicon file, True if the logo is dark and should be drawn light)
@@ -637,13 +645,29 @@ def motto_svg():
     return frame(W, H, "Motto", body, css)
 
 
+def about_svg():
+    W, H = 440, 150
+    body = [f'<text x="25" y="35" class="title">About Me</text>']
+    for i, (ic, label, val) in enumerate(ABOUT):
+        y = 70 + i * 28
+        body.append(
+            f'<g class="fade" style="animation-delay:{0.15 + i * 0.12:.2f}s">'
+            f'{icon(ic, 25, y - 12)}'
+            f'<text x="50" y="{y}" class="label">{escape(label)}</text>'
+            f'<text x="200" y="{y}" class="val">{escape(val)}</text></g>')
+    css = f'''.label {{ fill: {T["muted"]}; font-size: {T["label_size"]}px; font-weight: 600; }}
+  .val {{ fill: {T["text"]}; font-size: {T["label_size"]}px; font-weight: 700; }}'''
+    return frame(W, H, "About me", "\n".join(body), css)
+
+
 def main():
     offline = "--demo" in sys.argv
     data = demo() if offline else fetch()
     os.makedirs(OUT, exist_ok=True)
     cards = [("stats", lambda: stats_svg(data)), ("langs", lambda: langs_svg(data)),
              ("streak", lambda: streak_svg(data)), ("activity", lambda: activity_svg(data)),
-             ("header", hero_svg), ("tech", lambda: tech_svg(offline)), ("motto", motto_svg)]
+             ("header", hero_svg), ("about", about_svg),
+             ("tech", lambda: tech_svg(offline)), ("motto", motto_svg)]
     for name, fn in cards:
         with open(f"{OUT}/{name}.svg", "w", encoding="utf-8") as f:
             f.write(fn())

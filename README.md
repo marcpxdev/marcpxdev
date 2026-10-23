@@ -3,9 +3,7 @@
 </p>
 
 <p align="center">
-  🌱 Currently learning <b>MERN Stack</b><br/>
-  💬 Ask me about <b>Nothing 😆</b><br/>
-  ⚡ Fun fact: <b>Dev dev lang</b>
+  <img src="assets/about.svg" alt="About me: currently learning MERN Stack, ask me about Nothing, fun fact: Freelancing" width="440"/>
 </p>
 
 <br/>
