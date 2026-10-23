@@ -2,25 +2,6 @@
   <img src="assets/header.svg" alt="Hi, I'm marcxdev. Just a developer." width="100%"/>
 </p>
 
-<p align="center">
-  🌱 Currently learning <b>MERN Stack</b><br/>
-  💬 Ask me about <b>Nothing 😆</b><br/>
-  ⚡ Fun fact: <b>Dev dev lang</b>
-</p>
-
-<br/>
-
-<<<<<<< HEAD
-<h2 align="center">🛠️ Tech Stack</h2>
-
-<p align="center">
-  <img src="assets/tech.svg" alt="Tech stack: Java, JavaScript, TypeScript, Python, Ruby, C, C++, C#, HTML, CSS, React, Node.js, Express, Django, Rails, Flutter, Dart, PostgreSQL, MySQL, MongoDB" width="100%"/>
-</p>
-
-<br/>
-
-<h2 align="center">📊 GitHub Stats</h2>
-=======
 <h2 align="center">🚀 About Me</h2>
 
 <p align="center">
@@ -76,7 +57,6 @@
 ---
 
 <h2 align="center">◈ GitHub Stats ◈</h2>
->>>>>>> f8fbf972814b0d44ee3b79c3ac3e2a7d1c608262
 
 <p align="center">
   <img src="assets/stats.svg" alt="GitHub stats" height="180"/>
@@ -95,20 +75,11 @@
 
 <h2 align="center">🤝 Connect With Me</h2>
 
-<<<<<<< HEAD
-<!-- Replace each # with your link, or delete any you don't use -->
-<p align="center">
-  <a href="https://github.com/userMarcPaul"><img src="https://img.shields.io/badge/GitHub-7c3aed?style=for-the-badge" alt="GitHub"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/LinkedIn-7c3aed?style=for-the-badge" alt="LinkedIn"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Email-7c3aed?style=for-the-badge" alt="Email"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Portfolio-7c3aed?style=for-the-badge" alt="Portfolio"/></a>
-=======
 <!-- Replace the # with your links, or delete any you don't use -->
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio"/></a>
->>>>>>> f8fbf972814b0d44ee3b79c3ac3e2a7d1c608262
 </p>
 
 <br/>
@@ -116,9 +87,5 @@
 <h2 align="center">🧠 Motto</h2>
 
 <p align="center">
-<<<<<<< HEAD
-  <img src="assets/motto.svg" alt="while (alive) { code(); learn(); repeat(); }" width="520"/>
-=======
   <code>while (alive) { code(); learn(); repeat(); }</code>
->>>>>>> f8fbf972814b0d44ee3b79c3ac3e2a7d1c608262
 </p>
