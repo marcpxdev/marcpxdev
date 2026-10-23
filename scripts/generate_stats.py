@@ -437,7 +437,7 @@ def activity_svg(d):
 # ---------------------------------------------------------------- profile content
 # Edit these to change what the header, tech stack and motto show.
 
-NAME = "marcxdev"
+NAME = "marcpxdev"
 TAGLINES = ["Just a developer", "Learning the MERN stack", "Building apps with Flutter"]
 
 DEVICON = "https://raw.githubusercontent.com/devicons/devicon/master/icons"
